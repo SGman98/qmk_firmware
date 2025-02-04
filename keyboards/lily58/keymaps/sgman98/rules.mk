@@ -3,7 +3,6 @@ EXTRAKEY_ENABLE = yes       # Audio control and System control
 LTO_ENABLE = yes            # Link Time Optimization enabled
 MOUSEKEY_ENABLE = yes       # Mouse keys
 NKRO_ENABLE = yes           # N-Key Rollover
-FORCE_NKRO = yes            # Force N-Key Rollover
 OLED_ENABLE = yes           # OLED display
 TAP_DANCE_ENABLE = yes      # Tap dance
 KEY_OVERRIDE_ENABLE = yes   # Enable key override
