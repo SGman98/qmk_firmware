@@ -48,7 +48,7 @@ const key_override_t dot_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_DOT, KC
 const key_override_t *key_overrides[] = {
     &comma_key_override,
     &dot_key_override,
-}
+};
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -56,11 +56,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * ,-----------------------------------------.                    ,-----------------------------------------.
      * |QWERTY|   1  |   2  |   3  |   4  |   5  |                    |   6  |   7  |   8  |   9  |   0  |PrtSc |
      * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
-     * | Tab  |   Q  |   W  |   F  |   P  |   B  |                    |   K  |   L  |   U  |   Y  |   ;  |  CW  |
+     * | Tab  |   Q  |   W  |   F  |   P  |   B  |                    |   K  |   L  |   U  |   Y  | ARpt |      |
      * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
      * |LShift|   A  |   R  |   S  |   T  |   G  |-------.    ,-------|   M  |   N  |   E  |   I  |   O  |RShift|
      * |------+------+------+------+------+------|  Ins  |    |  Del  |------+------+------+------+------+------|
-     * |LCtrl |   Z  |   X  |   C  |   D  |   V  |-------|    |-------|   J  |   H  |  ,   |   .  |   :  |RCtrl |
+     * |LCtrl |   Z  |   X  |   C  |   D  |   V  |-------|    |-------|   J  |   H  |  ,   |   .  |  Rpt |RCtrl |
      * `-----------------------------------------/       /     \      \-----------------------------------------'
      *                   | LGUI | LAlt |  Esc | /Space  /       \BackSP\  |Enter | RAlt | RGUI |
      *                   |      |      | NUMS |/       /         \      \ | SYMS |      |      |
@@ -68,9 +68,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
     [_COLEMAK] = LAYOUT(
         TG_QWER,TD(_1F1),TD(_2F2),TD(_3F3),TD(_4F4),TD(_5F5),                  TD(_6F6),TD(_7F7),TD(_8F8),TD(_9F9),TD(_0F0), KC_PSCR,
-         KC_TAB,    KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,                      KC_K,    KC_L,    KC_U,    KC_Y, KC_SCLN, CW_TOGG,
+         KC_TAB,    KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,                      KC_K,    KC_L,    KC_U,    KC_Y, QK_AREP, _______,
         KC_LSFT,    KC_A,    KC_R,    KC_S,    KC_T,    KC_G,                      KC_M,    KC_N,    KC_E,    KC_I,    KC_O, KC_RSFT,
-        KC_LCTL,    KC_Z,    KC_X,    KC_C,    KC_D,    KC_V, MO_NAV1, MO_NAV2,    KC_J,    KC_H, KC_COMM,  KC_DOT, KC_COLN, KC_RCTL,
+        KC_LCTL,    KC_Z,    KC_X,    KC_C,    KC_D,    KC_V, MO_NAV1, MO_NAV2,    KC_J,    KC_H, KC_COMM,  KC_DOT,  QK_REP, KC_RCTL,
                                    KC_LGUI, KC_LALT, MO_NUMS,  KC_SPC, KC_BSPC, MO_SYMS, KC_RALT, KC_RGUI
     ),
 
