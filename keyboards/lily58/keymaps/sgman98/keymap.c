@@ -144,11 +144,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * ,-----------------------------------------.                    ,-----------------------------------------.
      * |      |      |      |      |      |      |                    |      |      |      |      |      |      |
      * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
-     * |      | WHLU | WHLL | MUP  | WHLR |      |                    |      | Home |  UP  |  End | PgUp |      |
+     * |      | WHLU | WHLL | MUP  | WHLR |      |                    | Vol+ | Home |  UP  |  End | PgUp |      |
      * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
-     * |      | WHLD |MLEFT |MDOWN |MRGHT |      |-------.    ,-------|      | LEFT | DOWN | RGHT | PgDn |      |
+     * |      | WHLD |MLEFT |MDOWN |MRGHT |      |-------.    ,-------| Vol- | LEFT | DOWN | RGHT | PgDn |      |
      * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
-     * |      | LNG1 | BTN1 | BTN2 | BTN3 |      |-------|    |-------|      | Vol+ | Vol- | Mute | LNG2 |      |
+     * |      | LNG1 | BTN1 | BTN2 | BTN3 |      |-------|    |-------| Mute | Prev | Play | Next | LNG2 |      |
      * `-----------------------------------------/       /     \      \-----------------------------------------'
      *                   |      |      |      | /       /       \      \  |      |      |      |
      *                   |      |      |      |/       /         \      \ |      |      |      |
@@ -156,9 +156,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      */
     [_NAV] = LAYOUT(
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        XXXXXXX, MS_WHLU, MS_WHLL,   MS_UP, MS_WHLR, XXXXXXX,                   XXXXXXX, KC_HOME,   KC_UP,  KC_END, KC_PGUP, XXXXXXX,
-        _______, MS_WHLD, MS_LEFT, MS_DOWN, MS_RGHT, XXXXXXX,                   XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, _______,
-        _______, KC_LNG1, MS_BTN2, MS_BTN3, MS_BTN1, XXXXXXX, _______, _______, XXXXXXX, KC_VOLU, KC_VOLD, KC_MUTE, KC_LNG2, _______,
+        XXXXXXX, MS_WHLU, MS_WHLL,   MS_UP, MS_WHLR, XXXXXXX,                   KC_VOLU, KC_HOME,   KC_UP,  KC_END, KC_PGUP, XXXXXXX,
+        _______, MS_WHLD, MS_LEFT, MS_DOWN, MS_RGHT, XXXXXXX,                   KC_VOLD, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, _______,
+        _______, KC_LNG1, MS_BTN2, MS_BTN3, MS_BTN1, XXXXXXX, _______, _______, KC_MUTE, KC_MPRV, KC_MPLY, KC_MNXT, KC_LNG2, XXXXXXX,
                                    _______, _______, _______, XXXXXXX, XXXXXXX, _______, _______, _______
     ),
 
