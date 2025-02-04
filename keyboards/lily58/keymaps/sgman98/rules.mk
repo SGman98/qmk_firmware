@@ -6,6 +6,7 @@ NKRO_ENABLE = yes           # N-Key Rollover
 FORCE_NKRO = yes            # Force N-Key Rollover
 OLED_ENABLE = yes           # OLED display
 TAP_DANCE_ENABLE = yes      # Tap dance
+KEY_OVERRIDE_ENABLE = yes   # Enable key override
 CONSOLE_ENABLE = no         # Console for debug
 COMMAND_ENABLE = no         # Commands for debug and configuration
 BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality

@@ -42,6 +42,14 @@ tap_dance_action_t tap_dance_actions[] = {
     [_0F0] = ACTION_TAP_DANCE_DOUBLE(KC_0, KC_F10),
 };
 
+const key_override_t comma_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_COMM, KC_SCLN);
+const key_override_t dot_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_DOT, KC_COLN);
+
+const key_override_t *key_overrides[] = {
+    &comma_key_override,
+    &dot_key_override,
+}
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     /* COLEMAK
