@@ -1,45 +1,29 @@
 #include "action_layer.h"
 #include <stdio.h>
 
-// Base layers
-#define L_COLEMAK 0                               // 0
-#define L_QWERTY (1 << 1)                         // 2
-
-#define L_NUMS (1 << 2)                           // 4
-#define L_SYMS (1 << 3)                           // 8
-#define L_NAV (1 << 4)                            // 16
-#define L_CONFIG (1 << 5)                         // 32
-#define L_CONFIG_TRI (L_CONFIG | L_NUMS | L_SYMS) // 44
+#define L_BASE 0
+#define L_LOWER (1 << 1)
+#define L_RAISE (1 << 2)
+#define L_ADJUST (1 << 3)
+#define L_ADJUST_TRI (L_ADJUST | L_RAISE | L_LOWER)
 
 char layer_state_str[24];
 
 const char *read_layer_state(void) {
   switch (layer_state)
   {
-  case L_COLEMAK:
-    snprintf(layer_state_str, sizeof(layer_state_str), "Layer: Colemak");
+  case L_BASE:
+    snprintf(layer_state_str, sizeof(layer_state_str), "Layer: Base");
     break;
-  case L_QWERTY:
-    snprintf(layer_state_str, sizeof(layer_state_str), "Layer: Qwerty");
+  case L_RAISE:
+    snprintf(layer_state_str, sizeof(layer_state_str), "Layer: Raise");
     break;
-
-  case L_NUMS:
-  case (L_NUMS | L_QWERTY):
-    snprintf(layer_state_str, sizeof(layer_state_str), "Layer: Nums");
+  case L_LOWER:
+    snprintf(layer_state_str, sizeof(layer_state_str), "Layer: Lower");
     break;
-  case L_SYMS:
-  case (L_SYMS | L_QWERTY):
-    snprintf(layer_state_str, sizeof(layer_state_str), "Layer: Syms");
-    break;
-  case L_NAV:
-  case (L_NAV | L_QWERTY):
-    snprintf(layer_state_str, sizeof(layer_state_str), "Layer: Nav");
-    break;
-  case L_CONFIG:
-  case L_CONFIG_TRI:
-  case (L_CONFIG | L_QWERTY):
-  case (L_CONFIG_TRI | L_QWERTY):
-    snprintf(layer_state_str, sizeof(layer_state_str), "Layer: Config");
+  case L_ADJUST:
+  case L_ADJUST_TRI:
+    snprintf(layer_state_str, sizeof(layer_state_str), "Layer: Adjust");
     break;
   default:
     snprintf(layer_state_str, sizeof(layer_state_str), "Layer: Undef-%u", layer_state);
