@@ -1,5 +1,6 @@
 #pragma once
 
+#define TAP_CODE_DELAY 100
 #define TAPPING_TERM 200
 
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
